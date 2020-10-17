@@ -7,8 +7,14 @@ using System.Collections;
 //                3. 物体object需要add Rigit2D 组件
 public class movable : MonoBehaviour
 {
-    public float walkSpeed=10;                   
-    private bool isDead = false;           
+    public float walkSpeed=3;                   
+    private bool isDead = false;
+
+    private float moving_x;
+    private float moving_y;
+    private bool attemp_move = true;
+    private float attemp_x = 9;
+    private float attemp_y = 9;
 
     private Animator anim;                  
     private Rigidbody2D rb2d;               
@@ -45,35 +51,91 @@ public class movable : MonoBehaviour
         {
             //animation.Stop();
             //animation.Play("upMove");
-            anim.SetTrigger("upMove");
-            animFinish = false;
-            rb2d.velocity = new Vector2(0, walkSpeed);
-            
+            moving_y = 1;
+            moving_x = 0;
+            if (attemp_moving(moving_x, moving_y))
+            {
+                anim.SetTrigger("upMove");
+                animFinish = false;
+                rb2d.velocity = new Vector2(0, walkSpeed);
+            }
+            else
+            {
+                rb2d.velocity = new Vector2(0, 0);
+            }
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            
-            anim.SetTrigger("leftMove");
-            //yield return new WaitForSecondsRealtime(1);
-            animFinish = false;
-            rb2d.velocity = new Vector2(-walkSpeed, 0);
-            //rb2d.AddForce(new Vector2(-walkSpeed, 0));
+            moving_x = -1;
+            moving_y = 0;
+            if (attemp_moving(moving_x, moving_y))
+            {
+                anim.SetTrigger("leftMove");
+                //yield return new WaitForSecondsRealtime(1);
+                animFinish = false;
+                rb2d.velocity = new Vector2(-walkSpeed, 0);
+
+                //rb2d.AddForce(new Vector2(-walkSpeed, 0));
+            }
+            else
+            {
+                rb2d.velocity = new Vector2(0, 0);
+            }
         }
         else if (Input.GetKey(KeyCode.S))
         {
-           
-            anim.SetTrigger("downMove");
-            animFinish = false;
-            //yield return new WaitForSecondsRealtime(1);            
-            rb2d.velocity = new Vector2(0, -walkSpeed);
+            moving_y = -1;
+            moving_x = 0;
+            if (attemp_moving(moving_x, moving_y))
+            {
+                anim.SetTrigger("downMove");
+                animFinish = false;
+                //yield return new WaitForSecondsRealtime(1);            
+                rb2d.velocity = new Vector2(0, -walkSpeed);
+            }
+            else
+            {
+                rb2d.velocity = new Vector2(0, 0);
+            }
         }
         else if (Input.GetKey(KeyCode.D))
         {
+            moving_x = 1;
+            moving_y = 0;
+            if (attemp_moving(moving_x, moving_y))
+            {
+                anim.SetTrigger("rightMove");
+                animFinish = false;
+                //yield return new WaitForSecondsRealtime(1);
+                rb2d.velocity = new Vector2(walkSpeed, 0);
+            }
+            else
+            {
+                rb2d.velocity = new Vector2(0, 0);
+            }
+        }
+    }
+
+    private bool attemp_moving(float x, float y)
+    {
+        if (attemp_move)
+        {
+            return true;
+        }
+        else
+        {
+            if(x == attemp_x && y == attemp_y)
+            {
+                return false;
+            }
+            else
+            {
+                attemp_move = true;
+                attemp_x = 9;
+                attemp_y = 9;
+                return true;
+            }
             
-            anim.SetTrigger("rightMove");
-            animFinish = false;
-            //yield return new WaitForSecondsRealtime(1);
-            rb2d.velocity = new Vector2(walkSpeed, 0);
         }
     }
 
@@ -89,10 +151,15 @@ public class movable : MonoBehaviour
         //animation.Stop();
         AfterMovingFinish();
     }
-
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(collision.tag == "obstacle_non" || collision.tag == "obstacle_cy")
+        {
+            attemp_move = false;
+            attemp_x = moving_x;
+            attemp_y = moving_y;
+            rb2d.velocity = new Vector2(0, 0);
+        }
     }
 }
 
