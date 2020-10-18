@@ -23,6 +23,45 @@ TextureImporter:
   - first:
       213: -5010578298943110035
     second: Classmate_3_6
+  - first:
+      213: 5660329724420520893
+    second: Classmate_3_7
+  - first:
+      213: -7289645056422573375
+    second: Classmate_3_8
+  - first:
+      213: 6639202850911343990
+    second: Classmate_3_9
+  - first:
+      213: 3382455630043652472
+    second: Classmate_3_10
+  - first:
+      213: 4143991816633361358
+    second: Classmate_3_11
+  - first:
+      213: -7869607470685242518
+    second: Classmate_3_12
+  - first:
+      213: 2727368719234330787
+    second: Classmate_3_13
+  - first:
+      213: -752299697060698400
+    second: Classmate_3_14
+  - first:
+      213: -2600753541000632653
+    second: Classmate_3_15
+  - first:
+      213: -1449667570505023184
+    second: Classmate_3_16
+  - first:
+      213: -8554277466992762105
+    second: Classmate_3_17
+  - first:
+      213: -5217987715339755866
+    second: Classmate_3_18
+  - first:
+      213: 6236524137717356183
+    second: Classmate_3_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,9 +172,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 53
-        y: 192
-        width: 37
-        height: 192
+        y: 336
+        width: 36
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +192,10 @@ TextureImporter:
       name: Classmate_3_2
       rect:
         serializedVersion: 2
-        x: 102
-        y: 240
-        width: 35
-        height: 144
+        x: 103
+        y: 336
+        width: 34
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,6 +289,111 @@ TextureImporter:
       bones: []
       spriteID: d6407349599d67ab0800000000000000
       internalID: -5010578298943110035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classmate_3_7
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 288
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb7ba705e78d8e40800000000000000
+      internalID: 5660329724420520893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classmate_3_8
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 240
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca0041817af5da90800000000000000
+      internalID: -7289645056422573375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classmate_3_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 192
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675d45021df232c50800000000000000
+      internalID: 6639202850911343990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classmate_3_10
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 288
+        width: 34
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871a5497975e0fe20800000000000000
+      internalID: 3382455630043652472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Classmate_3_11
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 240
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3ae86f99a628930800000000000000
+      internalID: 4143991816633361358
       vertices: []
       indices: 
       edges: []
